@@ -40,3 +40,16 @@ if (num1 > num2) {
 
 // notas de alumnos
 
+let nota1 = parseFloat(prompt("Ingrese la primera nota"));
+let nota2 = parseFloat(prompt("Ingrese la segunda nota"));
+let nota3 = parseFloat(prompt("Ingrese la tercera nota"));
+
+let promedio = (nota1 + nota2 + nota3) / 3
+      console.log ("el resultado promedio es: " + promedio)
+      if ( promedio >= 6) {
+        console.log ("Felicidades Aprobaste");
+      }
+      else {
+        console.log ("Lo siento, Desaprobaste");
+      }
+
