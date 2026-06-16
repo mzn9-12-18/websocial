@@ -53,3 +53,27 @@ let promedio = (nota1 + nota2 + nota3) / 3
         console.log ("Lo siento, Desaprobaste");
       }
 
+      // calculadora basica
+
+let numero1 = parseFloat(prompt("Ingrese el primer numero"));
+let numero2 = parseFloat(prompt("Ingrese el segundo numero"));
+
+let operacion = prompt ("Ingrese una operacion: suma, resta, multiplicacion, division");
+if ( operacion === "suma") {
+    console.log (numero1 + numero2);
+ }
+
+ else if ( operacion === "resta") {
+    console.log (numero1 - numero2);
+ }
+
+ else if ( operacion === "division") {
+    console.log (numero1 / numero2);
+ }
+
+ else if ( operacion === "multiplicacion") {
+    console.log (numero1 * numero2);
+ }
+ else {
+    console.log ("Operacion no valida");
+ }
