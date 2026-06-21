@@ -10,3 +10,15 @@ if (frase.includes(palabra)) {
 else {
     console.log ("❌ no se encontro la palabra")
 }
+
+
+//tarea math
+let numeroUsuario = Number(prompt("Ingrese un numero"));
+let numeroSecreto = Math.ceil(Math.random())*10
+
+if (numeroUsuario === numeroSecreto) {
+    console.log ("🎉 Felicidades Ganaste")
+}
+else {
+   console.log ("😢 Perdiste")
+}
