@@ -22,3 +22,26 @@ if (numeroUsuario === numeroSecreto) {
 else {
    console.log ("😢 Perdiste")
 }
+
+
+//tarea con switch
+
+let menu = (prompt("que menu deseas hoy?\n 1- 🥩carne\n  2- 🐟pescado\n 3- 🥬verdura"));
+
+ switch (menu) {
+    case "carne":
+        console.log ("🍷 se recomienda Vino tinto")
+        
+        break; 
+    case "pescado":
+        console.log ("🥂 se recomienda Vino blanco")
+        
+        break; 
+        case "verdura":
+        console.log ("💧 se recomienda Agua")
+        
+        break; 
+    default:
+        console.log ("elija carne, pescado o verdura")
+        break;
+}
