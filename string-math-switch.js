@@ -3,6 +3,9 @@
 
 let frase = (prompt("Ingrese una frase"));
 let palabra = (prompt("Busca una palabra"));
+let frase = frase.toLowerCase().trim();
+let frase = palabra.toLowerCase().trim();
+
 
 if (frase.includes(palabra)) {
     console.log ( "✅ se encontro la palabra" )
@@ -14,13 +17,13 @@ else {
 
 //tarea math
 let numeroUsuario = Number(prompt("Ingrese un numero"));
-let numeroSecreto = Math.ceil(Math.random())*10
+let numeroSecreto = Math.floor(Math.random() * 10 ) + 1;
 
 if (numeroUsuario === numeroSecreto) {
     console.log ("🎉 Felicidades Ganaste")
 }
 else {
-   console.log ("😢 Perdiste")
+   console.log ("😢 Perdiste. El numero secreto era" + numeroSecreto);
 }
 
 
