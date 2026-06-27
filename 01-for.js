@@ -36,3 +36,22 @@ if (!tabla) {
     console.log(`${tabla} x ${i} = ${tabla * i}`);
   }
 }
+
+
+//tarea de sumas del 1 al 10
+
+/* 
+--ALGORITMO--
+1- iniciar el programa.
+2- comenzar una suma en 0.
+3- recorrer los numeros del 1 al 10.
+4- sumar cada numero al total.
+5- mostrar la suma total.
+6- finalizar el programa. */
+
+let suma = 0
+for (let i = 1; i <= 10; i++) {
+    suma = suma + i
+}
+console.log ("la suma total es: " + suma);
+
