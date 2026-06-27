@@ -15,7 +15,7 @@ while (contador <= 10) {
   contador++;
 }
 
-console.log( "----")
+console.log( "")
 /* cuenta regresiva desde el 10 al 1
 
 --ALGORITMO--
@@ -33,4 +33,22 @@ let contadorRegresivo = 10;
 while (contadorRegresivo >= 1) {
   console.log(contadorRegresivo);
   contadorRegresivo--;
+}
+
+console.log ("¡Despegue! 🚀")
+
+console.log ("")
+
+/* mostrar numeros pares hasta el 20
+--ALGORITMO--
+--iniciar programa.
+1- definir el primer numero par.
+2- definir el segundo numero par.
+3- mostrar los numeros pares hasta el 20.
+--finalizar el programa.*/
+
+let numero1 = 2
+while (numero1 <= 20) {
+  console.log(numero1);
+  numero1+= 2;
 }
