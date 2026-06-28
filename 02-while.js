@@ -52,3 +52,36 @@ while (numero1 <= 20) {
   console.log(numero1);
   numero1+= 2;
 }
+
+
+
+/* El acumulador de "Dinero con Tope".
+
+--ALGORITMO--
+--iniciar programa.
+1- definir el objetivo de ahorro.
+2- inicializar la suma total en 0.
+3- pedir al usuario que ingrese un monto de ahorro diario.
+4- mientras la suma total sea menor al objetivo:
+  - sumarlo al total.
+  - si el monto es invalido (menor a 0), informar que es invalido.
+  - pedir un monto nuevo de ahorro.
+5- mostrar "¡Objetivo alcanzado!".
+--finalizar el programa. */
+
+let objetivo = 1000
+let suma = 0
+
+let monto= Number(prompt("Ingresá un monto de ahorro diario"));
+
+while (suma < objetivo) {
+    if (monto >= 0) {
+        suma = suma + monto;
+    }
+    else {
+        console.log("Monto invalido. Ingresa un nuevo monto.");
+    }
+  monto= Number(prompt("Ingresá un monto nuevo de ahorro"));
+ }
+
+ console.log ("¡Objetivo alcanzado!");
