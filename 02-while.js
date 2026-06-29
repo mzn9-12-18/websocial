@@ -77,13 +77,16 @@ let monto= Number(prompt("Ingresá un monto de ahorro diario"));
 while (suma < objetivo) {
     if (monto >= 0) {
         suma = suma + monto;
-    }
-    else {
-        console.log("Monto invalido. Ingresa un nuevo monto.");
-    }
-  monto= Number(prompt("Ingresá un monto nuevo"));
  }
-
+     
+    else { 
+        console.log("Monto invalido. Ingresa un nuevo monto.");
+     }
+    
+    if (suma < objetivo) {
+      monto= Number(prompt("Ingresá un monto nuevo"));
+ }
+ }
  console.log ("¡Objetivo alcanzado!");
 
 
@@ -108,7 +111,7 @@ let intentos = 0;
 let codigoIngresado;
 
 while(codigoIngresado !== codigoCorrecto && intentos < 3) {
-    codigoIngresado =  console.log("ingrese el codigo de verificacion");
+    codigoIngresado = Number(prompt("ingrese el codigo de verificacion"));
     intentos++;
     if (codigoIngresado === codigoCorrecto) {
         console.log("¡Codigo Correcto!");
@@ -116,11 +119,14 @@ while(codigoIngresado !== codigoCorrecto && intentos < 3) {
     else {
         console.log("¡Codigo Incorrecto!");
     }
+    if (codigoIngresado !== codigoCorrecto && intentos < 3) {
+        console.log("Te quedan " + (3 - intentos) + " intentos") ;
+    }
+    }
+
     if (codigoIngresado !== codigoCorrecto) {
-        console.log("Se acabaron los intentos.") ;
+        console.log("¡Se acabaron los intentos!.")
     }
-    }
-    
     //tarea de simulador de carritos
 
    /* --ALGORITMO--
