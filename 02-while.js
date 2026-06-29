@@ -121,4 +121,40 @@ while(codigoIngresado !== codigoCorrecto && intentos < 3) {
     }
     }
     
-    
+    //tarea de simulador de carritos
+
+   /* --ALGORITMO--
+
+--iniciar programa.
+1- inicializar el total en 0.
+2- pedir el precio del primer producto.
+3- preguntar si desea agregar otro producto.
+4- mientras la respuesta sea “si”:
+   - sumar el precio al total.
+   - pedir el precio del siguiente producto.
+   - preguntar si desea agregar otro producto.
+5- si el total supera los $5000:
+   - aplicar un 10% de descuento.
+6- mostrar el total final.
+--finalizar el programa. */
+
+
+let total = 0;
+
+let continuar = "si";
+
+while (continuar === "si") {
+
+    let precio = Number(prompt("Ingresá el precio del producto"));
+
+    total += precio;
+
+    continuar = prompt("¿Querés agregar otro producto? (si/no)");
+}
+
+if (total > 5000) {
+    total = total * 0.90;
+    console.log("¡Has obtenido un 10% de descuento!");
+}
+
+console.log("Total a pagar: $" + total);

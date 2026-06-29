@@ -109,3 +109,5 @@ let promedio = totalHoras / 7;
 console.log("Promedio de horas: " + promedio);
 
 
+
+
