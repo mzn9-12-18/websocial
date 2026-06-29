@@ -81,12 +81,42 @@ while (suma < objetivo) {
     else {
         console.log("Monto invalido. Ingresa un nuevo monto.");
     }
-  monto= Number(prompt("Ingresá un monto nuevo de ahorro"));
+  monto=
  }
 
  console.log ("¡Objetivo alcanzado!");
 
 
 
+ console.log("");
 
- 
+
+/* token de seguridad.
+
+--ALGORITMO--
+--iniciar el programa.
+1- agregar el codigo fijo.
+2- pedir al usuario que ingrese el codigo de verificacion.
+3- indicar al usuario que solo tiene 3 intentos para ingresarlo correctamente.
+4- un contador que cada vez que el usuario haga un intento fallido aumente.
+5- verificar que el codigo sea incorrecto.
+  - y que los intentos sean menores a 3.
+--finalizar el programa. */
+
+let codigoCorrecto = 4567;
+let intentos = 0;
+let codigoIngresado;
+
+while(codigoIngresado !== codigoCorrecto && intentos < 3) {
+    codigoIngresado =  console.log("ingrese el codigo de verificacion");
+    intentos++;
+    if (codigoIngresado === codigoCorrecto) {
+        console.log("¡Codigo Correcto!");
+    }
+    else {
+        console.log("¡Codigo Incorrecto!");
+    }
+    if (codigoIngresado !== codigoCorrecto) {
+        console.log("Se acabaron los intentos.") ;
+    }
+    }

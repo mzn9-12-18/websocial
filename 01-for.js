@@ -48,6 +48,7 @@ if (!tabla) {
 4- sumar cada numero al total.
 5- mostrar la suma total.
 6- finalizar el programa. */
+console.log("");
 
 let suma = 0
 for (let i = 1; i <= 10; i++) {
@@ -56,7 +57,7 @@ for (let i = 1; i <= 10; i++) {
 console.log ("la suma total es: " + suma);
 
 
-
+console.log("");
 
 /* triangulo de asteriscos con el ciclo for anidado.
 
