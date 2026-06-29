@@ -85,3 +85,8 @@ while (suma < objetivo) {
  }
 
  console.log ("¡Objetivo alcanzado!");
+
+
+
+
+ 

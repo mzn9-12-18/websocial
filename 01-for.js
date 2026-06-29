@@ -55,3 +55,25 @@ for (let i = 1; i <= 10; i++) {
 }
 console.log ("la suma total es: " + suma);
 
+
+
+
+/* triangulo de asteriscos con el ciclo for anidado.
+
+--ALGORITMO--
+-- iniciar el programa
+1- definir la cantidad de filas (5).
+2- recorrer cada fila desde la primera hasta la quinta.
+3- en cada fila :
+  -imprimir la cantidad de asteriscos correspondientes a esa fila.
+finalizar el programa-- */
+
+let fila = ""
+
+for (let fila = 1; fila <= 5; fila++) {
+    let linea = ""
+     for (let asterisco = 1; asterisco <= fila; asterisco++ ) {
+        linea += "*";
+     }
+     console.log(linea);
+}
