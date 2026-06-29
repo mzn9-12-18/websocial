@@ -81,7 +81,7 @@ while (suma < objetivo) {
     else {
         console.log("Monto invalido. Ingresa un nuevo monto.");
     }
-  monto=
+  monto= Number(prompt("Ingresá un monto nuevo"));
  }
 
  console.log ("¡Objetivo alcanzado!");
@@ -120,3 +120,5 @@ while(codigoIngresado !== codigoCorrecto && intentos < 3) {
         console.log("Se acabaron los intentos.") ;
     }
     }
+    
+    

@@ -78,3 +78,34 @@ for (let fila = 1; fila <= 5; fila++) {
      }
      console.log(linea);
 }
+ /*
+--ALGORITMO--
+--iniciar programa.
+1- inicializar un acumulador de horas en 0.
+2- repetir 7 veces:
+   - pedir al usuario las horas de estudio.
+   - si las horas son mayores o iguales a 0, sumarlas al acumulador.
+   - si son menores a 0, informar que el valor es inválido.
+3- calcular el promedio de horas (total / 7).
+4- mostrar el promedio en consola.
+--finalizar el programa. */
+
+
+let totalHoras = 0;
+
+for (let dia = 1; dia <= 7; dia++) {
+    let horas = Number(prompt("Ingresá las horas del día " + dia));
+
+    if (horas >= 0) {
+        totalHoras += horas;
+    } else {
+        console.log("Valor inválido.");
+        dia--; 
+    }
+}
+
+let promedio = totalHoras / 7;
+
+console.log("Promedio de horas: " + promedio);
+
+
