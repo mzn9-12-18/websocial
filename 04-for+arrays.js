@@ -25,3 +25,34 @@ for(let i = 0; i < palabras.length ; i++ ) {
 }
     
     console.log(palabarasTransformadas);
+
+
+/*
+--ALGORITMO--
+--iniciar programa.
+1- crear una variable para encontrar la temperatura maxima.
+2- crear una variable para encontrar la temperatura minima.
+3- recorrer el array de temperaturas con un for.
+4- comparar cada temperatura con la maxima y actualizarla si es mayor.
+5- comparar cada temperatura con la minima y actualizarla si es menor.
+6- mostrar la temperatura maxima y la temperatura minima.
+--finalizar programa. */
+
+const temperaturas = [18, 22, 15, 28, 12, 25, 19];
+let temperaturaMax = temperaturas [0];
+let temperaturaMin = temperaturas [0];
+
+for(let i = 0; i < temperaturas.length ; i++ ) {
+    const temperaturaActual = temperaturas [i];
+    
+   if( temperaturaActual > temperaturaMax) {
+         temperaturaMax = temperaturaActual;
+   }
+  
+    if( temperaturaActual < temperaturaMin) {
+         temperaturaMin = temperaturaActual;
+   }
+}
+
+console.log("la temperatura maxima es " +  temperaturaMax );
+console.log("la temperatura minima es " +  temperaturaMin );
