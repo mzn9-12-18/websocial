@@ -75,12 +75,12 @@ let suma = 0
 let monto= Number(prompt("Ingresá un monto de ahorro diario"));
 
 while (suma < objetivo) {
-    if (monto >= 0) {
-        suma = suma + monto;
+    if ( !isNaN(monto) && monto >= 0) {
+         suma += monto;
  }
      
     else { 
-        console.log("Monto invalido. Ingresa un nuevo monto.");
+        console.log("Monto invalido. Ingresa un monto mayor o igual que el 0.");
      }
     
     if (suma < objetivo) {
@@ -115,11 +115,12 @@ while(codigoIngresado !== codigoCorrecto && intentos < 3) {
     intentos++;
     if (codigoIngresado === codigoCorrecto) {
         console.log("¡Codigo Correcto!");
-    }
+        break;
+ }
     else {
         console.log("¡Codigo Incorrecto!");
     }
-    if (codigoIngresado !== codigoCorrecto && intentos < 3) {
+    if (intentos < 3) {
         console.log("Te quedan " + (3 - intentos) + " intentos") ;
     }
     }
