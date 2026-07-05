@@ -1,3 +1,58 @@
+/*--ALGORITMO--
+
+--Iniciar programa.
+
+1- Crear una función llamada convertirAMinutos.
+2- Recibir la cantidad de horas.
+3- Multiplicar las horas por 60.
+4- Retornar el resultado.
+5- Invocar la función con distintos valores.
+6- Mostrar los resultados en consola.
+
+--Finalizar programa*/
+
+function convertirAMinutos(horas) {
+    return horas * 60;
+}
+
+console.log(convertirAMinutos(1));
+console.log(convertirAMinutos(2));
+console.log(convertirAMinutos(5));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 function acumuladorDinero () {
     let objetivo = 1000
 let suma = 0
@@ -112,3 +167,4 @@ console.log("Promedio de horas: " + promedio);
 }
 
 gestorHoras();
+*/
