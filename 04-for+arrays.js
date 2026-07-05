@@ -44,7 +44,7 @@ let temperaturaMin = temperaturas [0];
 
 for(let i = 0; i < temperaturas.length ; i++ ) {
     const temperaturaActual = temperaturas [i];
-    
+
    if( temperaturaActual > temperaturaMax) {
          temperaturaMax = temperaturaActual;
    }
@@ -56,3 +56,30 @@ for(let i = 0; i < temperaturas.length ; i++ ) {
 
 console.log("la temperatura maxima es " +  temperaturaMax );
 console.log("la temperatura minima es " +  temperaturaMin );
+
+/*
+--ALGORITMO--
+1. Iniciar programa.
+2. Crear un array vacío para guardar los resultados.
+3. Recorrer el array de números con un for.
+4. Obtener el número actual.
+5. Si el número es par, elevarlo al cuadrado y guardarlo en el nuevo array.
+6. Si el número es impar, guardarlo sin modificar.
+7. Mostrar el nuevo array.
+8. Finalizar programa. */
+
+const numeros = [2, 5, 8, 11, 4, 7];
+
+const numerosCodificados = [];
+
+for (let i = 0; i < numeros.length; i++) {
+    const numeroActual = numeros[i];
+
+    if (numeroActual % 2 === 0) {
+        numerosCodificados.push(numeroActual ** 2);
+    } else {
+        numerosCodificados.push(numeroActual);
+    }
+}
+
+console.log(numerosCodificados);
