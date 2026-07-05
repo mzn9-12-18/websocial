@@ -19,9 +19,32 @@ console.log(convertirAMinutos(1));
 console.log(convertirAMinutos(2));
 console.log(convertirAMinutos(5));
 
+/*
+--ALGORITMO--
 
+--Iniciar programa.
 
+1- Crear una función llamada puedeVotar.
+2- Recibir una edad.
+3- Comparar si la edad es mayor o igual a 18.
+4- Si se cumple, retornar true.
+5- Si no se cumple, retornar false.
+6- Invocar la función con distintas edades.
+7- Mostrar los resultados en consola.
 
+--Finalizar programa.*/
+
+function puedeVotar(edad) {
+    if (edad >= 18) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(puedeVotar(15));
+console.log(puedeVotar(18));
+console.log(puedeVotar(25));
 
 
 
