@@ -47,11 +47,31 @@ console.log(puedeVotar(18));
 console.log(puedeVotar(25));
 
 
+/*--ALGORITMO--
+
+--Iniciar programa.
+
+1- Crear una función llamada calcularPrecioFinal.
+2- Recibir el precio original y el porcentaje de descuento.
+3- Calcular el monto del descuento.
+4- Restar el descuento al precio original.
+5- Retornar el precio final.
+6- Invocar la función con distintos valores.
+7- Mostrar los resultados en consola.
+
+--Finalizar programa.*/
 
 
 
 
+function calcularPrecioFinal(precioOriginal, porcentajeDescuento) {
+    const descuento = (precioOriginal * porcentajeDescuento) / 100;
+    return precioOriginal - descuento;
+}
 
+console.log(calcularPrecioFinal(1000, 10));
+console.log(calcularPrecioFinal(500, 20));
+console.log(calcularPrecioFinal(800, 15));
 
 
 
