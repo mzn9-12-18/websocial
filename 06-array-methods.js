@@ -45,6 +45,7 @@ const obtenerMayoresDeEdad = (edades) =>
 console.log(obtenerMayoresDeEdad(edades));
 
 
+console.log("");
 /*
 Ejercicio 3: El Buscador de Códigos ( find)
 
@@ -73,4 +74,58 @@ console.log(buscarProducto(codigos, "Z99"));
 
 console.log("");
 
+
+/*
+Ejercicio 4: El Acumulador Maestro ( reduce) 
+
+-- ALGORITMO --
+
+--iniciar programa 
+
+1- Crear una función llamada calcularTotalVentas.
+2- recibir un array de numeros
+3- recorrer el array utilizando .reduce().
+4- sumar todas las ventas del dia.
+5- deolver el total de las ventas.
+6- mostrar el resultado en consola.
+
+  finalizar programa. -- */
+
+  const ventas = [100, 250, 50, 300, 120];
+
+  const calcularTotalVentas = (ventas) =>
+    ventas.reduce((total, ventaActual) => total + ventaActual, 0);
+
+  console.log(calcularTotalVentas(ventas));
+
+  console.log("");
+
+
+  /*
+  Ejercicio 5: Gestión de Objetos (El "Inventario Simple")
+
+  --ALGORITMO--
+
+--Iniciar programa.
+
+1- Crear un array llamado inventario.
+2- Agregar 3 objetos con nombre y precio.
+3- Crear una función llamada listarPrecios.
+4- Recibir el array de productos.
+5- Recorrer el array utilizando map().
+6- Obtener el precio de cada producto.
+7- Devolver un nuevo array con los precios.
+8- Mostrar el resultado en consola.
+
+--Finalizar programa. */
+
+const inventario = [
+    { nombre: "Mouse", precio: 15000 },
+    { nombre: "Teclado", precio: 30000},
+    { nombre: "Monitor", precio: 25000}
+];
+
+const listarPrecios = (inventario) =>
+    inventario.map((producto) => producto.precio);
+console.log(listarPrecios(inventario));
 
