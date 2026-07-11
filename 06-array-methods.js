@@ -129,3 +129,37 @@ const listarPrecios = (inventario) =>
     inventario.map((producto) => producto.precio);
 console.log(listarPrecios(inventario));
 
+console.log("");
+
+
+/*
+Ejercicio 6: El Desafío Combinado (Integración)
+
+--ALGORITMO--
+
+--Iniciar programa.
+
+1- Crear un array llamado estudiantes.
+2- Agregar objetos con nombre y nota.
+3- Crear una función llamada obtenerAprobados.
+4- Recibir el array de estudiantes.
+5- Filtrar los estudiantes con nota mayor o igual a 6.
+6- Obtener los nombres de los estudiantes aprobados utilizando map().
+7- Devolver un nuevo array con los nombres.
+8- Mostrar el resultado en consola.
+
+--Finalizar programa. */
+
+const estudiantes = [
+  { nombre: "Ana", nota: 8 },
+  { nombre: "Beto", nota: 4 },
+  { nombre: "Carla", nota: 10 },
+  { nombre: "David", nota: 5 }
+];
+
+const obtenerAprobados = (estudiantes) =>
+  estudiantes
+    .filter((estudiante) => estudiante.nota >= 6)
+    .map((estudiante) => estudiante.nombre);
+
+console.log(obtenerAprobados(estudiantes));
