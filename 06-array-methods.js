@@ -15,8 +15,13 @@ ejercicio 1 : EL TRANSFORMADOR DE DATOS. (map)
 
 const temperaturas = [0, 10, 20, 30, 40];
 
-const convertirAFahrenheit = (temperaturas) => 
-     temperaturas.map((temperatura) =>  (temperatura * 9 / 5) + 32);
+const convertirAFahrenheit = (temperaturas) => { 
+    if (!Array.isArray(temperaturas)) {
+        console.warn("Error: Se esperaba un array");
+return []; 
+ }
+     return temperaturas.map((temperatura) =>  (temperatura * 9 / 5) + 32);
+      }
 console.log(convertirAFahrenheit(temperaturas));
 
 
@@ -125,8 +130,14 @@ const inventario = [
     { nombre: "Monitor", precio: 25000}
 ];
 
-const listarPrecios = (inventario) =>
-    inventario.map((producto) => producto.precio);
+const listarPrecios = (inventario) => {
+    if (inventario.length === 0) {
+        console.warn("Advertencia: El inventario está vacío");
+        return [];
+     }
+    return inventario.map((producto) => producto.precio);
+ }
+
 console.log(listarPrecios(inventario));
 
 console.log("");
