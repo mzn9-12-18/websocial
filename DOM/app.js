@@ -5,7 +5,8 @@ const listaTareas = document.querySelector("#listaTareas");
 btnAgregar.addEventListener("click", () => {
     console.log(inputTarea.value);
 
-    const li = document.createElement("li");
+    if (inputTarea.value.trim() !== "" ) {
+         const li = document.createElement("li");
     
     li.className = "list-group-item d-flex justify-content-between";
 
@@ -20,4 +21,8 @@ btnAgregar.addEventListener("click", () => {
     listaTareas.append(li);
     inputTarea.value = "";
     inputTarea.focus();
-});
+
+   } else {
+         alert ("Debes ingresar una tarea");
+      }
+   });
