@@ -2,6 +2,7 @@ const btnAgregar = document.querySelector("#btnAgregar");
 const inputTarea = document.querySelector("#inputTarea");
 const listaTareas = document.querySelector("#listaTareas");
 
+
 btnAgregar.addEventListener("click", () => {
     console.log(inputTarea.value);
 
@@ -15,4 +16,6 @@ btnAgregar.addEventListener("click", () => {
     `;
 
     listaTareas.append(li);
+    inputTarea.value = "";
+    inputTarea.focus();
 });
