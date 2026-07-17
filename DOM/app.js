@@ -12,12 +12,25 @@ btnAgregar.addEventListener("click", () => {
 
     li.innerHTML = `
         <span>${inputTarea.value}</span>
-        <button class=“btn btn-danger btn-sm”>X</button>
+        <div>
+        <button class="btn btn-warning btn-sm btn-prioridad">
+        Prioridad
+        </button>
+        <button class="btn btn-danger btn-sm btn-borrar">
+        X
+        </button>
+        </div>
     `;
-    const botonBorrar = li.querySelector("button");
+    const botonPrioridad = li.querySelector(".btn-prioridad");
+    const botonBorrar = li.querySelector(".btn-borrar");
    botonBorrar.addEventListener("click" , () => {
     li.remove();
    });
+
+   botonPrioridad.addEventListener("click" , () => {
+   li.classList.toggle("bg-warning");
+   });
+
     listaTareas.append(li);
     inputTarea.value = "";
     inputTarea.focus();
@@ -26,3 +39,4 @@ btnAgregar.addEventListener("click", () => {
          alert ("Debes ingresar una tarea");
       }
    });
+
