@@ -39,3 +39,32 @@ btnSemaforo.addEventListener("click", () => {
     }, 3000);
 
 });
+
+
+const boton = document.getElementById("btnGuardar");
+const alerta = document.getElementById("alerta");
+
+boton.addEventListener("click", () => {
+
+    alerta.classList.remove("d-none");
+
+    setTimeout(() => {
+
+        alerta.classList.add("d-none");
+
+    }, 3000);
+
+});
+
+
+const btnCargar = document.getElementById("btnCargar");
+const tarjeta = document.getElementById("tarjeta");
+
+btnCargar.addEventListener("click", async () => {
+const respuesta = await fetch("https://jsonplaceholder.typicode.com/users/1");
+const datos = await respuesta.json();
+tarjeta.innerHTML = `
+    <h2>${datos.name}</h2>
+    <p>${datos.email}</p>
+`;
+});
