@@ -17,3 +17,25 @@ btnIniciar.addEventListener("click", () => {
     }, 1000);
 
 });
+
+
+const semaforo = document.getElementById("semaforo");
+const btnSemaforo = document.getElementById("btnSemaforo");
+
+btnSemaforo.addEventListener("click", () => {
+
+    semaforo.style.backgroundColor = "red";
+
+    setTimeout(() => {
+
+        semaforo.style.backgroundColor = "yellow";
+
+        setTimeout(() => {
+
+            semaforo.style.backgroundColor = "green";
+
+        }, 2000);
+
+    }, 3000);
+
+});
