@@ -68,3 +68,21 @@ tarjeta.innerHTML = `
     <p>${datos.email}</p>
 `;
 });
+
+
+const btnPersonaje = document.getElementById("btnPersonaje");
+const resultado = document.getElementById("resultado");
+
+btnPersonaje.addEventListener("click", async () => {
+
+    resultado.innerHTML = "<p>Cargando...</p>";
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    const respuesta = await fetch("https://rickandmortyapi.com/api/character/5");
+    const data = await respuesta.json();
+
+    resultado.innerHTML = `
+        <h2>${data.name}</h2>
+        <img src="${data.image}" alt="${data.name}">
+    `;
+
+});
