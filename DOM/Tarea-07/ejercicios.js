@@ -1,3 +1,5 @@
+
+//ejercicio 1 de la cuenta regresiva de despegue
 const contador = document.querySelector("#contador");
 const btnIniciar = document.querySelector("#btnIniciar");
 
@@ -18,6 +20,7 @@ btnIniciar.addEventListener("click", () => {
 
 });
 
+//ejercicio 2 de el semaforo inteligente
 
 const semaforo = document.getElementById("semaforo");
 const btnSemaforo = document.getElementById("btnSemaforo");
@@ -40,6 +43,7 @@ btnSemaforo.addEventListener("click", () => {
 
 });
 
+// ejercicio 3 de el mensaje flash 
 
 const boton = document.getElementById("btnGuardar");
 const alerta = document.getElementById("alerta");
@@ -56,6 +60,7 @@ boton.addEventListener("click", () => {
 
 });
 
+// ejercicio 4 de el buscador de usuario
 
 const btnCargar = document.getElementById("btnCargar");
 const tarjeta = document.getElementById("tarjeta");
@@ -69,6 +74,7 @@ tarjeta.innerHTML = `
 `;
 });
 
+// ejercicio 5 de Galería de Personajes con Indicador de Carga
 
 const btnPersonaje = document.getElementById("btnPersonaje");
 const resultado = document.getElementById("resultado");
