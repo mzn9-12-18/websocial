@@ -5,7 +5,9 @@ const btnIniciar = document.querySelector("#btnIniciar");
 
 let numero = 10;
 btnIniciar.addEventListener("click", () => {
-
+    btnIniciar.disabled = true;
+    let numero = 10;
+    contador.textContent = numero;
     const intervalo = setInterval(() => {
 
         numero--;
@@ -14,6 +16,7 @@ btnIniciar.addEventListener("click", () => {
         if (numero === 0) {
             clearInterval(intervalo);
             contador.textContent = "¡Despegue! 🚀";
+             btnIniciar.disabled = false;
         }
 
     }, 1000);
@@ -26,7 +29,7 @@ const semaforo = document.getElementById("semaforo");
 const btnSemaforo = document.getElementById("btnSemaforo");
 
 btnSemaforo.addEventListener("click", () => {
-
+    btnSemaforo.disabled = true;
     semaforo.style.backgroundColor = "red";
 
     setTimeout(() => {
@@ -36,7 +39,7 @@ btnSemaforo.addEventListener("click", () => {
         setTimeout(() => {
 
             semaforo.style.backgroundColor = "green";
-
+             btnSemaforo.disabled = false;
         }, 2000);
 
     }, 3000);
@@ -62,17 +65,23 @@ boton.addEventListener("click", () => {
 
 // ejercicio 4 de el buscador de usuario
 
-const btnCargar = document.getElementById("btnCargar");
-const tarjeta = document.getElementById("tarjeta");
+    const btnCargar = document.getElementById("btnCargar");
+    const tarjeta = document.getElementById("tarjeta");
 
-btnCargar.addEventListener("click", async () => {
-const respuesta = await fetch("https://jsonplaceholder.typicode.com/users/1");
-const datos = await respuesta.json();
-tarjeta.innerHTML = `
+    btnCargar.addEventListener("click", async () => {
+ try {   
+    const respuesta = await fetch("https://jsonplaceholder.typicode.com/users/1");
+    const datos = await respuesta.json();
+    tarjeta.innerHTML = `
     <h2>${datos.name}</h2>
     <p>${datos.email}</p>
-`;
-});
+    `;
+    } catch (error) {
+        tarjeta.innerHTML = "<p>Error al cargar el usuario</p>";
+     } finally {
+         btnCargar.disable = false;
+    }
+    });
 
 // ejercicio 5 de Galería de Personajes con Indicador de Carga
 
